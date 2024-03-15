@@ -10,14 +10,10 @@ export default function ExchangeRateCal({ fromCurrency, toCurrency, amount }) {
       .then((response) => response.json())
       .then((data) => {
         const rates = data.rates;
-        if (rates && fromCurrency && toCurrency) {
-          const fromRate = rates[fromCurrency];
-          const toRate = rates[toCurrency];
-          if (fromRate && toRate) {
-            const calculatedRate = (toRate / fromRate) * amount;
-            setExchangeRate(calculatedRate.toFixed(2));
-          }
-        }
+        const fromRate = rates[fromCurrency];
+        const toRate = rates[toCurrency];
+        const calculatedRate = (toRate / fromRate) * amount;
+        setExchangeRate(calculatedRate.toFixed(2));
       });
   }, [fromCurrency, toCurrency, amount]);
 

@@ -19,7 +19,9 @@ export default function CurrencyConverter() {
 
   return (
     <div className="container">
-      <h2>Currency Converter</h2>
+      <h2>
+        <u>Currency Converter</u>
+      </h2>
       <form>
         <div className="Amount">
           <input
@@ -29,6 +31,7 @@ export default function CurrencyConverter() {
             onChange={handleAmountChange}
           />
         </div>
+
         <Dropdown
           fromCurrency={fromCurrency}
           toCurrency={toCurrency}
@@ -40,11 +43,13 @@ export default function CurrencyConverter() {
           <ExchangeRateCal
             fromCurrency={fromCurrency}
             toCurrency={toCurrency}
-            amount={parseFloat(amount)}
+            amount={amount}
           />
         )}
 
-        <button className="exhnageRateBtn" onClick={handleButtonClick}>Get Exchange Rate</button>
+        <button className="exhnageRateBtn" onClick={handleButtonClick}>
+          Get Exchange Rate
+        </button>
       </form>
     </div>
   );

@@ -15,9 +15,9 @@ body {
 .container {
   background-color: #153243;
   padding: 2rem;
-
   min-height: 45vh;
   width: 50vh;
+  box-shadow: 3px 3px 3px 3px;
 }
 
 .container h2 {
@@ -96,6 +96,6 @@ form button {
   width: 15%;
   height: 5%;
 }
-.exhnageRateBtn{
+.exhnageRateBtn {
   margin-top: 20px;
 }

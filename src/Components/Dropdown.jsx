@@ -20,14 +20,12 @@ export default function Dropdown({ setFromCurrency, setToCurrency }) {
 
   const countryList = () => {
     const options = [];
-    if (currencies) {
-      for (const currencyCode in currencies) {
-        options.push(
-          <option key={currencyCode} value={currencyCode}>
-            {`${currencyCode} - ${currencies[currencyCode]}`}
-          </option>
-        );
-      }
+    for (const currencyCode in currencies) {
+      options.push(
+        <option key={currencyCode} value={currencyCode}>
+          {`${currencyCode} - ${currencies[currencyCode]}`}
+        </option>
+      );
     }
     return options;
   };

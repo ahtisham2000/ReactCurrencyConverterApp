@@ -85,12 +85,13 @@ form input {
 }
 
 form button {
-  height: 3rem;
+  height: 2.5rem;
   color: #284b63;
   background-color: #eef0eb;
   font-weight: 600;
   font-size: 1.25rem;
   cursor: pointer;
+  box-shadow: 3px 3px black;
 }
 .ArrowImg {
   width: 15%;

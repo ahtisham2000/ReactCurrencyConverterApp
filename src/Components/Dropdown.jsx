@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import arrow from "../Assests/arrow.png";
+import CountryDropdown from "./CountryDropdown";
 
 export default function Dropdown({ setFromCurrency, setToCurrency }) {
   const [currencies, setCurrencies] = useState(null);
@@ -32,23 +33,15 @@ export default function Dropdown({ setFromCurrency, setToCurrency }) {
 
   return (
     <div className="dropdown">
-      <div className="From">
-        <p>From</p>
-        <div className="select-container">
-          <select name="from" onChange={handleFromCurrencyChange}>
-            {countryList()}
-          </select>
-        </div>
-      </div>
+      <CountryDropdown
+        countryList={countryList}
+        handleCountryChange={handleFromCurrencyChange}
+      />
       <img className="ArrowImg" src={arrow} alt="arrow.png" />
-      <div className="To">
-        <p>To</p>
-        <div className="select-container">
-          <select name="to" onChange={handleToCurrencyChange}>
-            {countryList()}
-          </select>
-        </div>
-      </div>
+      <CountryDropdown
+        countryList={countryList}
+        handleCountryChange={handleToCurrencyChange}
+      />
     </div>
   );
 }

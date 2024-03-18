@@ -13,7 +13,7 @@ export default function CurrencyConverter() {
   };
 
   const handleButtonClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     setShowResult(true);
   };
 
@@ -47,7 +47,11 @@ export default function CurrencyConverter() {
           />
         )}
 
-        <button className="exhnageRateBtn" onClick={handleButtonClick}>
+        <button
+          className="exhnageRateBtn"
+          type="button"
+          onClick={handleButtonClick}
+        >
           Get Exchange Rate
         </button>
       </form>

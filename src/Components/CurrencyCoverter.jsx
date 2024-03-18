@@ -9,11 +9,14 @@ export default function CurrencyConverter() {
   const [showResult, setShowResult] = useState(false);
 
   const handleAmountChange = (e) => {
-    setAmount(e.target.value);
+    const inputValue = e.target.value;
+    if (inputValue >= 0) {
+      setAmount(inputValue);
+    }
   };
 
   const handleButtonClick = (e) => {
-    // e.preventDefault();
+    // e.preventDefault(); acheived by "button" type=button
     setShowResult(true);
   };
 
@@ -26,7 +29,7 @@ export default function CurrencyConverter() {
         <div className="Amount">
           <input
             placeholder="Enter amount..."
-            type="text"
+            type="number"
             value={amount}
             onChange={handleAmountChange}
           />

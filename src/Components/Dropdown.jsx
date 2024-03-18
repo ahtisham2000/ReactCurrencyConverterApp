@@ -11,12 +11,12 @@ export default function Dropdown({ setFromCurrency, setToCurrency }) {
       .then((data) => setCurrencies(data));
   }, []);
 
-  const handleFromCurrencyChange = (event) => {
-    setFromCurrency(event.target.value);
+  const handleFromCurrencyChange = (e) => {
+    setFromCurrency(e.target.value);
   };
 
-  const handleToCurrencyChange = (event) => {
-    setToCurrency(event.target.value);
+  const handleToCurrencyChange = (e) => {
+    setToCurrency(e.target.value);
   };
 
   const countryList = () => {

@@ -17,6 +17,7 @@ body {
   padding: 2rem;
   min-height: 45vh;
   width: 50vh;
+  border-radius: 5px;
   box-shadow: 3px 3px 3px 3px;
 }
 
@@ -99,4 +100,10 @@ form button {
 }
 .exhnageRateBtn {
   margin-top: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
